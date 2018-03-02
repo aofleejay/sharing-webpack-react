@@ -27,6 +27,13 @@ module.exports = {
           { loader: 'style-loader' },
           { loader: 'css-loader' }
         ]
+      },
+      {
+        test: /\.jpg$/,
+        exclude: /(node_modules)/,
+        use: {
+          loader: 'file-loader'
+        }
       }
     ]
   },
