@@ -1,6 +1,6 @@
 import React from 'react'
 import { hot } from 'react-hot-loader'
-import banner from '../assets/images/vans.jpg'
+import banner from './assets/images/vans.jpg'
 import './App.css'
 
 const App = () => (
