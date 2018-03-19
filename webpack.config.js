@@ -44,7 +44,6 @@ module.exports = {
           loader: 'html-loader',
           options: {
             minimize: true,
-            collapseWhitespace: false,
           },
         },
       },
