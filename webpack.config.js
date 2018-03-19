@@ -7,7 +7,7 @@ module.exports = {
   entry: './src/index.js',
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'dist'),
   },
   module: {
     rules: [
@@ -18,30 +18,41 @@ module.exports = {
           loader: 'babel-loader',
           options: {
             presets: ['babel-preset-env', 'babel-preset-react'],
-            plugins: ['react-hot-loader/babel']
-          }
-        }
+            plugins: ['react-hot-loader/babel'],
+          },
+        },
       },
       {
         test: /\.css$/,
         exclude: /(node_modules)/,
         use: [
           { loader: 'style-loader' },
-          { loader: 'css-loader' }
-        ]
+          { loader: 'css-loader' },
+        ],
       },
       {
         test: /\.png$/,
         exclude: /(node_modules)/,
         use: {
-          loader: 'file-loader'
-        }
-      }
-    ]
+          loader: 'file-loader',
+        },
+      },
+      {
+        test: /\.html$/,
+        exclude: /(node_modules)/,
+        use: {
+          loader: 'html-loader',
+          options: {
+            minimize: true,
+            collapseWhitespace: false,
+          },
+        },
+      },
+    ],
   },
   devServer: {
     contentBase: './dist',
-    hot: true
+    hot: true,
   },
   plugins: [
     new CleanWebpackPlugin(['dist']),
@@ -50,5 +61,5 @@ module.exports = {
       title: 'My App',
       template: 'public/index.html',
     }),
-  ]
+  ],
 }
