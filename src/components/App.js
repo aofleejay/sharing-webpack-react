@@ -2,7 +2,8 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { randomUser } from '../redux/user'
 import logo from '../assets/images/logo.png'
-import './App.css'
+// import './App.css' // CSS version
+import './App.scss'
 
 const App = ({ user, randomUser }) => (
   <div className="app">

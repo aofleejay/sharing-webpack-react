@@ -1,0 +1,46 @@
+body {
+  margin: 0;
+}
+
+.app {
+  font-family: Sukhumvit Set;
+  text-align: center;
+  background-color: #282c34;
+  padding: 100px;
+
+  .logo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100px;
+  }
+  
+  .profile-image {
+    width: 128px;
+    border: 2px solid white;
+    border-radius: 64px;
+  }
+  
+  .name {
+    color: salmon;
+  }
+  
+  .email {
+    color: lightgray;
+  }
+  
+  .random-button {
+    font-family: Sukhumvit Set;
+    outline: none;
+    width: 125px;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    background-color: salmon;
+    transition: filter 0.5s ease 0s;
+
+    &:hover {
+      filter: brightness(90%);
+    }
+  }
+}
