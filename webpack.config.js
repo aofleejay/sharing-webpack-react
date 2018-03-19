@@ -1,6 +1,7 @@
 const path = require('path')
 const webpack = require('webpack')
-const CopyWebpackPlugin = require('copy-webpack-plugin')
+const CleanWebpackPlugin = require('clean-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   entry: './src/index.js',
@@ -43,7 +44,11 @@ module.exports = {
     hot: true
   },
   plugins: [
+    new CleanWebpackPlugin(['dist']),
     new webpack.HotModuleReplacementPlugin(),
-    new CopyWebpackPlugin([{ from: 'public' }])
+    new HtmlWebpackPlugin({
+      title: 'My App',
+      template: 'public/index.html',
+    }),
   ]
 }
