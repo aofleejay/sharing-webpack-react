@@ -9,6 +9,13 @@ body {
   padding: 100px;
 }
 
+.logo {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100px;
+}
+
 .profile-image {
   width: 128px;
   border: 2px solid white;

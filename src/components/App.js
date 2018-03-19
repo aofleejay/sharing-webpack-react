@@ -1,12 +1,12 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { randomUser } from '../redux/user'
-import banner from '../assets/images/vans.jpg'
+import logo from '../assets/images/logo.png'
 import './App.css'
 
 const App = ({ user, randomUser }) => (
   <div className="app">
-    {/* <img src={banner} /> */}
+    <img className="logo" src={logo} />
     <img className="profile-image" src={user.image} />
     <h1 className="name">{user.name}</h1>
     <h2 className="email">{user.email}</h2>
